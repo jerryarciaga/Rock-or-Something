@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Hi, I'm Jerry Arciaga](README.md)
+* [About Me](README.md)
 
 ## Posts
 
