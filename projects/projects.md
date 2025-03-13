@@ -1,6 +1,2 @@
----
-icon: briefcase
----
-
 # Projects
 
