@@ -2,8 +2,10 @@
 
 * [About Me](README.md)
 
-## Posts
+## Projects
+* [Projects](projects/projects.md)
+## CTF writeups
+* [CTF writeups](ctf-writeups/ctf-writeups.md)
+## Blog posts
+* [Blog posts](blog-posts/blog-posts.md)
 
-* [Projects](posts/projects.md)
-* [CTF Writeups](posts/ctf-writeups.md)
-* [Blog Posts](posts/blog-posts.md)

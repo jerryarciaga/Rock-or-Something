@@ -1,6 +1,0 @@
----
-icon: pencil
----
-
-# CTF Writeups
-
