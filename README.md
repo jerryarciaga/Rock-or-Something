@@ -1,7 +1,7 @@
 ---
 noIndex: true
 icon: hand-wave
-cover: https://gitbookio.github.io/onboarding-template-images/header.png
+cover: images/rock_or_something.png
 coverY: 0
 layout:
   cover:
