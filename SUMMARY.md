@@ -4,6 +4,6 @@
 
 ## Posts
 
-* [Projects](posts/quickstart.md)
-* [CTF Writeups](posts/publish-your-docs.md)
+* [Projects](posts/projects.md)
+* [CTF Writeups](posts/ctf-writeups.md)
 * [Blog Posts](posts/blog-posts.md)
