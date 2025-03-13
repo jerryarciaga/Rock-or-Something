@@ -7,5 +7,5 @@
 ## CTF writeups
 * [CTF writeups](ctf-writeups/ctf-writeups.md)
 ## Blog posts
-* [Blog posts](blog-posts/blog-posts.md)
+* [How I started using Linux](blog-posts/how-i-started-using-linux.md)
 
