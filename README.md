@@ -1,8 +1,8 @@
 ---
 noIndex: true
 icon: hand-wave
-cover: images/rock_or_something.png
-coverY: 0
+cover: images/rock_or_something_mre.jpg
+coverY: 1
 layout:
   cover:
     visible: true
