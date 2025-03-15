@@ -5,7 +5,7 @@
 ## Projects
 * [Projects](projects/projects.md)
 ## Writeups
-* [Bash Scripting Class | NSL](writeups/nullspace-bash-scripting)
+* [Bash Scripting Class | NSL](writeups/nullspace-bash-scripting.md)
 * [My NixOS Setup](writeups/my-nixos-setup.md)
 ## Blog posts
 * [I attended my school's Cybersecurity Club for the first time](blog-posts/ciat-cyber-meeting.md)
