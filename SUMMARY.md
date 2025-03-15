@@ -5,7 +5,7 @@
 ## Projects
 * [Projects](projects/projects.md)
 ## Writeups
-* [Writeups](writeups/writeups.md)
+* [My NixOS Setup](writeups/my-nixos-setup.md)
 ## Blog posts
 * [I attended my school's Cybersecurity Club for the first time](blog-posts/ciat-cyber-meeting.md)
 * [How I started using Linux](blog-posts/how-i-started-using-linux.md)
