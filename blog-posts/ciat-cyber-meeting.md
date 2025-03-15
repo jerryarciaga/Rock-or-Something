@@ -41,4 +41,3 @@ I have been in California Institute of Applied Technology and just got my Associ
 * **Advanced**: OSCE, OSEE, GXPN, SEC670, SEC770
 # Thoughts
 The meeting was held in Microsoft Teams, with one presenter usually taking over. One of the things that I miss a lot in joining student clubs is physical interaction, which I didn't have during this meeting. The instructor put up a PowerPoint slides detailing his journey into Cyber Security, from his days as an Electronic Technican to Vulnerability Assessment and Penetration Testing Manager. He also highlighted the importance of programming, scripting skills as well as fundamental IT concepts. One of the members stressed how important Linux knowledge is when breaking into this career field. Unfortunately, I was getting my car maintenance done so I attended the meeting in a pretty noisy area. Next meeting, I'll do my best to find a quieter spot so I can document this better.
-
