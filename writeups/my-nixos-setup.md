@@ -16,8 +16,6 @@ I almost lost my highschool photos when I setting up my partitions when I was in
 {% endstep %}
 {% step %}
 ## Learn a bit about Nix and NixOS
-{% endstep %}
-{% step %}
 This is the first time I am using an OS that is configured declaratively. For a long time, I kept hearing about this concept from Linux content creators like [Linux Unplugged](https://www.jupiterbroadcasting.com/show/linux-unplugged/) and [The Linux Cast](https://www.youtube.com/@TheLinuxCast). The offered mixed reviews about this, and after reading more about NixOS I decided that the benefits of installing NixOS outweighed the potential drawbacks. I'm still have a long way to go in learning Nix, but after reading through documentation and checking out [Vimjoyer's tutorial series](https://www.youtube.com/watch?v=a67Sv4Mbxmc&list=PLko9chwSoP-15ZtZxu64k_CuTzXrFpxPEA), I learned enough to be able to install NixOS on my own.
 {% endstep %}
 {% step %}
