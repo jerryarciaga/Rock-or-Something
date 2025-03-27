@@ -121,9 +121,10 @@ Knowing this, we should be able to send a `POST` request containing code equival
 ![Set `damage_dealt to code listed above`](images/flag.png)
 
 ## Final thoughts
+
 > "I lost the battle, but won the war." - *Jerry Arciaga, after spending hours for this one flag*
 
-After solving the CTF, I realized that the hints are actually pointing to this vulnerability! In the `challenge/application/templates/index.html`, this snippet contained a Jinja2 template evaluated expression:
+After solving the CTF, I realized that the hints were actually pointing to this vulnerability! In the `challenge/application/templates/index.html`, this snippet contained a Jinja2 template evaluated expression:
 
 ```html
 <p class="nes-text">
