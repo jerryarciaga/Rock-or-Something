@@ -108,17 +108,17 @@ Knowing this, we should be able to send a `POST` request containing code equival
 * You have two chances to intercept `POST` requests: before the battle where you can modify the user name and after the battle where you can modify damage taken, damage dealt, etc.
 * Here's an example of me modifying the post-battle `POST` request, making it look like I won the battle.
 
-![image](images/before_post.png)
+![Setting up the `POST` request](images/before_post.png)
 
-![image](images/after_post.png)
+![`outcome` modified from defeat to victory](images/after_post.png)
 
 * Here is a screenshot of me successfully injecting `{{ url_for.__globals__ }}` in one of the parameters.
 
-![image](images/first_injection.png)
+![Set `damage_dealt = {{ url_for.__globals__ }}`](images/first_injection.png)
 
 * Do it yourself: modify one of the parameters with `{{request.application.__globals__.__builtins__.__import__('os').popen('cat flag.txt').read()}}`. You should end up with something similarto this screenshot. Read more about this injected snippet [in this similar writeup](https://www.onsecurity.io/blog/server-side-template-injection-with-jinja2).
 
-![image](images/flag.png)
+![Set `damage_dealt to code listed above`](images/flag.png)
 
 ## Final thoughts
 > "I lost the battle, but won the war." - *Jerry Arciaga, after spending hours for this one flag*
