@@ -1,4 +1,3 @@
-# Cyber Apocalypse CTF 2025 Writeups
 # Trial by Fire
 
 > As you ascend the treacherous slopes of the Flame Peaks, the scorching heat and shifting volcanic terrain test your endurance with every step. Rivers of molten lava carve fiery paths through the mountains, illuminating the night with an eerie crimson glow. The air is thick with ash, and the distant rumble of the earth warns of the danger that lies ahead. At the heart of this infernal landscape, a colossal Fire Drake awaits—a guardian of flame and fury, determined to judge those who dare trespass. With eyes like embers and scales hardened by centuries of heat, the Fire Drake does not attack blindly. Instead, it weaves illusions of fear, manifesting your deepest doubts and past failures. To reach the Emberstone, the legendary artifact hidden beyond its lair, you must prove your resilience, defying both the drake’s scorching onslaught and the mental trials it conjures. Stand firm, outwit its trickery, and strike with precision—only those with unyielding courage and strategic mastery will endure the Trial by Fire and claim their place among the legends of Eldoria.
@@ -118,7 +117,7 @@ Knowing this, we should be able to send a `POST` request containing code equival
 
 ![Set `damage_dealt = {{ url_for.__globals__ }}`](images/first_injection.png)
 
-* Do it yourself: modify one of the parameters with `{{request.application.__globals__.__builtins__.__import__('os').popen('cat flag.txt').read()}}`. You should end up with something similarto this screenshot. Read more about this injected snippet [in this proof of concept](https://www.onsecurity.io/blog/server-side-template-injection-with-jinja2).
+* Do it yourself: modify one of the parameters with `{{request.application.__globals__.__builtins__.__import__('os').popen('cat flag.txt').read()}}`. You should end up with something similar to this screenshot. Read more about this injected snippet [in this proof of concept](https://www.onsecurity.io/blog/server-side-template-injection-with-jinja2).
 
 ![Set `damage_dealt to code listed above`](images/flag.png)
 
