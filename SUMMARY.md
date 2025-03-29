@@ -5,7 +5,9 @@
 ## Projects
 * [Projects](projects/projects.md)
 ## Writeups
-* [Cyber Apocalypse CTF 2025](writeups/htb-cyber-apocalypse-2025.md)
+### Capture the Flag
+* HTB Cyber Apocalypse 2025
+    * [Trial by Fire | Web](writeups/trial-by-fire.md)
 * [Bash Scripting | NSL Workshops](writeups/nullspace-bash-scripting.md)
 * [My NixOS Setup](writeups/my-nixos-setup.md)
 ## Blog posts
