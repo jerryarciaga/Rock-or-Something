@@ -7,7 +7,7 @@ $ file challenge
 challenge: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=47f180529af15b5a7d4601583b2944010ae6e092, for GNU/Linux 4.4.0, not stripped
 ```
 
-The binary, when run, will as for an incantation to reveal its secret. There are probably ways to get that incantation, but let's start with something simple first.
+The binary, when run, will ask for an incantation to reveal its secret. There are probably ways to get that incantation, but let's start with something simple first.
 
 If we look at this binary just like any other data file in Linux, running `strings` pulls those printable bits of text. I truncated the output since the original output had more than 100 lines.
 
