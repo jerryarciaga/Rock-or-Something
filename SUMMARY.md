@@ -1,5 +1,6 @@
-# About Me
-* [Hi, I'm Jerry Arciaga](README.md)
+# Table of contents
+
+* [About Me](README.md)
 
 ## Projects
 * [Projects](projects/projects.md)

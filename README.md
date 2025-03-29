@@ -1,7 +1,12 @@
 ---
 noIndex: true
 icon: hand-wave
+cover: images/rock_or_something.png
+coverY: 0
 layout:
+  cover:
+    visible: true
+    size: hero
   title:
     visible: true
   description:
@@ -16,7 +21,7 @@ layout:
 
 # About Me
 
-Welcome to my site! Here, you will see everything I have learned over the course of my tech career. I started using Linux ever since the release of Windows 8. Because I kept running into issues, from not being able to install certain packages to boot failures, I have started to learn basic troubleshooting skills, including the old, tried and true RTFM. This led me to many different rabbit holes, like distro hopping, DE/WM hopping, and ricing my Linux System to make my deskop experience look pretty. I started this blog as a way to document my projects, CTF writeups and things I learn.
+Hi, I'm Jerry Arciaga and welcome to my site! Here, you will see everything I have learned over the course of my tech career. I started using Linux ever since the release of Windows 8. Because I kept running into issues, from not being able to install certain packages to boot failures, I have started to learn basic troubleshooting skills, including the old, tried and true RTFM. This led me to many different rabbit holes, like distro hopping, DE/WM hopping, and ricing my Linux System to make my deskop experience look pretty. I started this blog as a way to document my projects, CTF writeups and things I learn.
 
 ## Other links
 
