@@ -1,7 +1,6 @@
 ---
 noIndex: true
 icon: hand-wave
-coverY: 0
 layout:
   title:
     visible: true
