@@ -12,7 +12,7 @@
 * Null Space Labs
     * [Bash Scripting](writeups/null-space-labs/bash-scripting.md)
 * Nix/NixOS
-        * [My NixOS Setup](writeups/nix-nixos/my-nixos-setup.md)
+    * [My NixOS Setup](writeups/nix-nixos/my-nixos-setup.md)
 ## Blog posts
 * [I took the AZ-900 exam](blog-posts/az-900-test.md)
 * [CIAT Cybersecurity Club First Meeting](blog-posts/ciat-cyber-meeting.md)
