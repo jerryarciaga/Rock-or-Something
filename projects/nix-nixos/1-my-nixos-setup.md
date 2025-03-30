@@ -24,5 +24,6 @@ This involves figuring out what I want to have in my system. In every Linux dist
 ### LUKS (Linux Unified Key Setup)
 This is a disk encryption mechanism that is widely available across Linux systems. I find this useful since this protects my data in case my laptop gets stolen. I would encrypt my hard drive using a passphrase, but I had debates on whether or not I want to implement TPM. On user-friendly distros, this is usually done by clicking on a check box, but requires the on more advanced distros like Arch or Gentoo
 ### Secure Boot
+Secure boot protects your firmware from having malicious code injected to it. This is a feature that ensures that the OS you are using is booted using trusted software. Without it, it's possible for an attacker to inject malware in the firmware level and have it persist between boots. This is possible through [LanzaBoote](https://github.com/nix-community/lanzaboote), a community-driven project that implements Secure Boot in NixOS.
 {% endstep %}
 {% endstepper %}
