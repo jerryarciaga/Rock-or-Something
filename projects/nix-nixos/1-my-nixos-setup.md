@@ -92,10 +92,29 @@ At this point, everything should be ready for installation.
 Once done, the process should ask you to set the `root` password. You can now boot up to your installed system.
 
 ## Secure Boot
+### Creating Secure Boot keys
+Create your Secure Boot keys by entering the following:
+```
+sudo sbctl create-keys
+```
+### Rebuild your system
 Remember when you had to comment out those lines in `flake.nix`? After cloning into the repository, it's now a good time to leave them uncommented. Clone the repo again, `cd` into the flake directory, then run the following:
 ```
 sudo nixos-rebuild switch --flake .
 ```
 {% hint style="info" %}
 You can also pass `--flake .#<hostname>`, but you don't have to since after running the `nixos-install` command, the machine should've been assigned that hostname.
+{% endhint %}
+After rebuilding your system `sbctl verify` should now have signed `.efi` or `.EFI` files. According to the [documentation](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md#checking-that-your-machine-is-ready-for-secure-boot-enforcement), files ending in `bzImage.efi` is expected to not be signed.
+### Enable Secure Boot - Setup Mode
+Reboot your PC, but before proceeding to the OS, enable Secure Boot but put it in *Setup Mode*.This can be done by looking for an option to enable *Setup Mode* or an option to Reset into Setup Mode.
+{% hint style="warning" %}
+Do not select "Clear All Secure Boot Keys" as it will drop the Forbidden Signature Database (dbx)
+{% endhint %}
+Once booted up, you have to enroll your keys to activate Secure Boot.
+```
+sudo sbctl enroll-keys --microsoft
+```
+{% hint style="info" %}
+According to [documentation](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md#enrolling-keys), by using `--microsoft`, we enroll the Microsoft OEM certs. This is becuase some hardware might include OptionROMs signed with Microsoft keys.
 {% endhint %}
