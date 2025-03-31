@@ -29,3 +29,73 @@ LVM makes it possible to partition disks in a way that you can easily resize it.
 Secure boot protects your firmware from having malicious code injected to it. This is a feature that ensures that the OS you are using is booted using trusted software. Without it, it's possible for an attacker to inject malware in the firmware level and have it persist between boots. This is possible through [LanzaBoote](https://github.com/nix-community/lanzaboote), a community-driven project that implements Secure Boot in NixOS.
 {% endstep %}
 {% endstepper %}
+
+# The Installation Process
+Most of the installation process is documented in my [GitHub Repo](https://github.com/jerryarciaga/NixOS-Flake). Similar to installing Arch and Gentoo, we manually set up partitions for our Linux System.
+{% hint style="warning" %}
+**Disable Secure Boot** before booting into the LiveISO image; otherwise, the OS will not boot at all.
+{% endhint %}
+
+## Partition Setup
+Partition your drive using `gdisk`. Make sure the boot partition is of type `EF00` and the LVM is of type `8E00`. Two disk partitions are needed for this setup: a 2G `/boot` partition as well as an LVM. The 2G space for the `/boot` accounts for the extra space needed for storing previous kernels. I am currently using LVM-on-LUKS for easier access as I would only need one passphrase to decrypt the whole partition.
+To make my LUKS+LVM setup portable across many computers, I decided to configure my bootloader to look for a partition labeled `nixos`, so it can access it through `/dev/disk/by-label/nixos`. For first-time setup, make sure to do the following:
+### `boot` and LVM
+```
+# mkfs.vfat -n BOOT /dev/<first_partition>
+# cryptsetup luksFormat --label nixos /dev/<second_partition>
+```
+Ensure the `boot` partition is mounted in such a way that only root has access to it.
+```
+mount -o umask=077 /dev/disk/by-label/boot /mnt/boot
+```
+### Setup LVM
+The following `lsblk` output should provide an idea on how I set up my LVM and filesystems.
+```
+$ lsblk
+
+NAME                        MAJ:MIN RM   SIZE RO TYPE  MOUNTPOINTS
+nvme0n1                     259:0    0 931.5G  0 disk  
+├─nvme0n1p1                 259:1    0     2G  0 part  /boot
+└─nvme0n1p2                 259:2    0 929.5G  0 part  
+  └─luksroot                254:0    0 929.5G  0 crypt 
+    ├─cappuccino_vg-tmp     254:1    0     1G  0 lvm   /tmp
+    ├─cappuccino_vg-var     254:2    0     2G  0 lvm   /var
+    ├─cappuccino_vg-var_log 254:3    0    50G  0 lvm   /var/log
+    ├─cappuccino_vg-swap    254:4    0    16G  0 lvm   [SWAP]
+    ├─cappuccino_vg-root    254:5    0   100G  0 lvm   /nix/store
+    └─cappuccino_vg-home    254:6    0 760.5G  0 lvm   /home
+```
+
+## NixOS Flake
+For this, you need to clone the repo, `cd` into it, generate the hardware configuration based on how the partitions are initially set up then run the install command.
+```
+git clone https://github.com/jerryarciaga/NixOS-Flake
+cd NixOS-Flake
+sudo nixos-generate-config --root /mnt --show-hardware-config | tee ./flake/host/<hostname>/hardware-configuration.nix
+```
+Before running the NixOS install command, you need to first comment out references to Lanzaboote. According to the [documentation](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md), you need to first setup `systemd-boot` before switching it up to Lanzaboote. You can uncomment these once you start booting into the newly installed NixOS system.
+```
+$ cat flake.nix
+
+...
+# lanzaboote.nixosModules.lanzaboote
+# ./modules/secureboot.nix
+...
+
+```
+
+## Install NixOS
+At this point, everything should be ready for installation.
+```
+# nixos-install --root --flake .#<hostname>
+```
+Once done, the process should ask you to set the `root` password. You can now boot up to your installed system.
+
+## Secure Boot
+Remember when you had to comment out those lines in `flake.nix`? After cloning into the repository, it's now a good time to leave them uncommented. Clone the repo again, `cd` into the flake directory, then run the following:
+```
+sudo nixos-rebuild switch --flake .
+```
+{% hint style="info" %}
+You can also pass `--flake .#<hostname>`, but you don't have to since after running the `nixos-install` command, the machine should've been assigned that hostname.
+{% endhint %}
