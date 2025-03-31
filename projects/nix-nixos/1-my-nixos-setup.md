@@ -118,7 +118,9 @@ sudo sbctl enroll-keys --microsoft
 {% hint style="info" %}
 According to [documentation](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md#enrolling-keys), by using `--microsoft`, we enroll the Microsoft OEM certs. This is because some hardware might include OptionROMs signed with Microsoft keys.
 {% endhint %}
+
 After enrolling, you can now reboot your system. At this point Secure Boot is now activated and in user mode. You can verify with `bootctl status`.
+
 # Post Installation
 At this point, we have a barely working system that only logs into TTY. You can then reset the user's password by using your `root` account.
 My next post will cover Home Manager and how I implement it on my computers. I will dive in deeper into using NixOS not only to install software, but to configure them as well. See you there!
