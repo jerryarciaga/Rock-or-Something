@@ -3,7 +3,8 @@
 * [About Me](README.md)
 
 ## Projects
-* [Projects](projects/projects.md)
+* Nix/NixOS
+    * [Part I: My NixOS Setup](projects/nix-nixos/1-my-nixos-setup.md)
 ## Writeups
 * Capture the Flag
     * HTB Cyber Apocalypse 2025
@@ -11,8 +12,6 @@
         * [Sealed Rune | Reversing](writeups/htb-cyber-apocalypse-2025/sealed-rune.md)
 * Null Space Labs
     * [Bash Scripting](writeups/null-space-labs/bash-scripting.md)
-* Nix/NixOS
-    * [My NixOS Setup](writeups/nix-nixos/my-nixos-setup.md)
 ## Blog posts
 * [I took the AZ-900 exam](blog-posts/az-900-test.md)
 * [CIAT Cybersecurity Club First Meeting](blog-posts/ciat-cyber-meeting.md)
