@@ -106,7 +106,7 @@ sudo nixos-rebuild switch --flake .
 You can also pass `--flake .#<hostname>`, but you don't have to since after running the `nixos-install` command, the machine should've been assigned that hostname.
 {% endhint %}
 After rebuilding your system `sbctl verify` should now have signed `.efi` or `.EFI` files. According to the [documentation](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md#checking-that-your-machine-is-ready-for-secure-boot-enforcement), files ending in `bzImage.efi` is expected to not be signed.
-### Enable Secure Boot - Setup Mode
+### Enable Secure Boot
 Reboot your PC, but before proceeding to the OS, enable Secure Boot but put it in *Setup Mode*.This can be done by looking for an option to enable *Setup Mode* or an option to Reset into Setup Mode.
 {% hint style="warning" %}
 Do not select "Clear All Secure Boot Keys" as it will drop the Forbidden Signature Database (dbx)
@@ -118,3 +118,11 @@ sudo sbctl enroll-keys --microsoft
 {% hint style="info" %}
 According to [documentation](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md#enrolling-keys), by using `--microsoft`, we enroll the Microsoft OEM certs. This is because some hardware might include OptionROMs signed with Microsoft keys.
 {% endhint %}
+After enrolling, you can now reboot your system. At this point Secure Boot is now activated and in user mode. You can verify with the following:
+```
+bootctl status
+```
+
+# Post Installation
+At this point, we have a barely working system that only logs into TTY. You can set the password of any user account by typing in `passwd <user>` then following the prompt.
+My next post will cover Home Manager and how I implement it on my computers. I will dive in deeper into using NixOS not only to install software, but to configure them as well. See you there!
