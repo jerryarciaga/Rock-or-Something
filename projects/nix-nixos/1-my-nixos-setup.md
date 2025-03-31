@@ -116,5 +116,5 @@ Once booted up, you have to enroll your keys to activate Secure Boot.
 sudo sbctl enroll-keys --microsoft
 ```
 {% hint style="info" %}
-According to [documentation](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md#enrolling-keys), by using `--microsoft`, we enroll the Microsoft OEM certs. This is becuase some hardware might include OptionROMs signed with Microsoft keys.
+According to [documentation](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md#enrolling-keys), by using `--microsoft`, we enroll the Microsoft OEM certs. This is because some hardware might include OptionROMs signed with Microsoft keys.
 {% endhint %}
