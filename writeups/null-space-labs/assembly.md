@@ -104,6 +104,7 @@ syscall ; call kernel
 Asking the OS to provide a service to your program
 
 # Second Example: Arithmetic
+{% code lineNumbers="true" %}
 ```asm
 ; Example exit(10) with register manipulation/arithmetic
 BITS 64
@@ -116,6 +117,7 @@ _start:
     mov rax, 60
     syscall
 ```
+{% endcode %}
 
 # Control Flow Instructions
 ## Functions
@@ -123,6 +125,7 @@ _start:
 * `ret` - return to calling address
 
 # Example 3: Function Calls
+{% code lineNumbers="true" %}
 ```asm
 ; Example code for function calls
 BITS 64
@@ -152,21 +155,26 @@ code3:
     call code2
     ret
 ```
+{% endcode %}
 
 # Higher Level Control Flow Concepts
 Take a look at this simple Python code
+{% code lineNumbers="true" %}
 ```python
 a = 10
 if (a == 1):
     do_stuff
 ```
+{% endcode %}
 ## Assembly `if` conditional
+{% code lineNumbers="true" %}
 ```asm
 mov rax, 10
 cmp rax, 1
 jz do_stuff
 jmp exit
 ```
+{% endcode %}
 * `cmp dest, source` - compare by subtracting source from dest (do not store result in dest)
 * `jz` - jump to address if result of previous instruction was *zero*
 * `jmp` - jump to address, unconditionally
@@ -175,6 +183,7 @@ jmp exit
 * `RFLAGS` - register which keeps track of the most recent instruction flags
 
 # Example 4: Conditional Statement
+{% code lineNumbers="true" %}
 ```asm
 ; Example conditional, check if rax == 1 
 ; If true, return 10, otherwise return 0
@@ -196,6 +205,7 @@ exit:
     mov rax, 60
     syscall
 ```
+{% endcode %}
 
 # Additional Common Instructions
 * `sub dest, source`
@@ -203,6 +213,7 @@ exit:
 * `dec asdf`
 
 # Assembly `for` loop
+{% code lineNumbers="true" %}
 ```asm
 ; Example "for loop"
 
@@ -228,6 +239,7 @@ _exit:
     mov rax, 60
     syscall
 ```
+{% endcode %}
 
 # Components of a process
 * **Text**: Program code
