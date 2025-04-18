@@ -12,8 +12,8 @@
         * [Sealed Rune | Reversing](writeups/htb-cyber-apocalypse-2025/sealed-rune.md)
 * Null Space Labs
     * [Bash Scripting](writeups/null-space-labs/bash-scripting.md)
+    * [Assembly](writeups/null-space-labs/assembly.md)
 ## Blog posts
 * [I took the AZ-900 exam](blog-posts/az-900-test.md)
 * [CIAT Cybersecurity Club First Meeting](blog-posts/ciat-cyber-meeting.md)
 * [How I started using Linux](blog-posts/how-i-started-using-linux.md)
-
