@@ -17,7 +17,8 @@ push
 
 # Our First Program
 * Our program will do: `exit(10)`
-```nasm
+{% code lineNumbers="true" %}
+```
 ; This is a comment line. All text after a ; is a comment below.
 ; Example code for exit with return value 10
 
@@ -35,6 +36,7 @@ _start:
     mov rax, 60     ; store value 60 in rax register (sys_exit number)
     syscall         ; perform a system call
 ```
+{% endcode %}
 ## Compiling our first program
 * You may need to do: `sudo apt install nasm`
 * On NixOS or with `nix`: `nix-shell -p nasm`
