@@ -18,7 +18,7 @@ push
 # Our First Program
 * Our program will do: `exit(10)`
 {% code lineNumbers="true" %}
-```
+```asm
 ; This is a comment line. All text after a ; is a comment below.
 ; Example code for exit with return value 10
 
