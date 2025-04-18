@@ -244,8 +244,7 @@ _exit:
 * Watch/manipulate a program while it's running
 ## Basic features of a debugger
 * Run-time disassembly
-* To disassemble as compiled program, run the following:
+* To disassemble a compiled program, run the following:
 ```
 $ objdump -M intel -d exec_code
 ```
-
