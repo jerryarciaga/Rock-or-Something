@@ -5,9 +5,9 @@ After installing the base flake, it was time for me to install `home-manager`, a
 {% stepper %}
 {% step %}
 ## Run the installer script.
-{% endstop %}
+{% endstep %}
 {% step %}
 ## Build home-manager
 This can be done using `home-manager switch`. This installs and configures every application according to how I specified in the `*.nix` files.
-{% endstop %}
+{% endstep %}
 {% endstepper %}
