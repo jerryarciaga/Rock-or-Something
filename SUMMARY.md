@@ -11,6 +11,8 @@
     * HTB Cyber Apocalypse 2025
         * [Trial by Fire | Web](writeups/htb-cyber-apocalypse-2025/trial-by-fire.md)
         * [Sealed Rune | Reversing](writeups/htb-cyber-apocalypse-2025/sealed-rune.md)
+    * BYUCTF 2025
+        * [Hash Psycho | Misc](writeups/byuctf-2025/hash-psycho.md)
 * Null Space Labs
     * [Bash Scripting](writeups/null-space-labs/bash-scripting.md)
     * [Assembly](writeups/null-space-labs/assembly.md)
