@@ -5,6 +5,7 @@
 ## Projects
 * Nix/NixOS
     * [Part I: My NixOS Setup](projects/nix-nixos/1-my-nixos-setup.md)
+    * [Part II: Home Manager](projects/nix-nixos/2-home-manager.md)
 ## Writeups
 * Capture the Flag
     * HTB Cyber Apocalypse 2025
