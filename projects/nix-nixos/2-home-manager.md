@@ -5,6 +5,10 @@ After installing the base flake, it was time for me to install `home-manager`, a
 {% stepper %}
 {% step %}
 ## Run the installer script.
+The following script creates a symlink at `$HOME/.config/home-manager` that points to the repo's `home-manager` directory.
+```
+$ ./install.sh
+```
 {% endstep %}
 {% step %}
 ## Build home-manager
