@@ -2,7 +2,7 @@
 ## Description
 > Brand new authentication server, zero security vulnerabilities.
 ## Source code
-{% code title="hash_psycho.py" overflow="wrap" lineNumbers="true" %}
+{% code title="hash_psycho.py" lineNumbers="true" %}
 ```python
 FLAG = "byuctf{}"
 
@@ -55,3 +55,5 @@ elif choice == 2:
         quit()
 ```
 {% endcode %}
+
+# 
