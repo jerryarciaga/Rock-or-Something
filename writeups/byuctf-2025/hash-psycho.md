@@ -88,4 +88,17 @@ print(f'Found it! {id}')
 ```
 {% endcode %}
 
-I ran this while attempting other challenges, hoping for a collision. When I ran `hash` using the Python REPL, I notice that for all the numbers I've tested so far, the hash of a number is equal to the number itself.
+I ran this while attempting other challenges, hoping for a collision. I actually ran this, hoping for it to find a number before I woke up. My `while` loop ended within a couple seconds, but it gave me the output `Found it! 1337`. When I ran `hash` using the Python REPL, I notice that for all the numbers I've tested so far, the hash of a number is equal to the number itself. I then modified the code so it starts with `id = 1338`.
+
+{% code title="solver.py" lineNumbers="true" %}
+```python
+id = 1338 # Start with 1338
+while hash(id) != hash(1337):
+    print(f'Trying {id}...)
+    id += 1
+print(f'Found it! {id}')
+```
+{% endcode %}
+
+## Research
+I asked ChatGPT if collisions can occure in Python's `hash()` function. I learned that it's possible, but it needs an input number that's large enough to cause it.
