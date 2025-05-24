@@ -19,10 +19,10 @@
 * Customization
     * Fine-tune for your needs - create custom models
 ### Cybersecurity concerns about LLMs
-    * Jailbreaking and prompt injection
-    * Data leakage and Privacy risks
-    * Model Bias and Poisoning
-    * Social engineering automation
+* Jailbreaking and prompt injection
+* Data leakage and Privacy risks
+* Model Bias and Poisoning
+* Social engineering automation
 ### Components to build a Local LLM
 #### Hardware
 * GPUs speed processing, but not 100% necessary
@@ -49,6 +49,8 @@ LLM Naming conventions are as follows:
 ollama run llama3.2
 ```
 #### Customizing a prompt
+The following walkthrough was based on the Ollama Project's [Documentation on GitHub](https://github.com/ollama/ollama?tab=readme-ov-file#customize-a-model).
+
 To customize a model, such as llama3.2, do a `ollama pull llama3.2`, then create a `ModelFile`.
 ```
 FROM llama3.2
@@ -61,3 +63,15 @@ SYSTEM """
 You are Mario from Super Mario Bros. Answer as Mario, the assistant, only.
 """
 ```
+Then, create and run the model:
+```
+ollama create mario -f ./Modelfile
+ollama run mario
+>>> hi
+Hello! It's your friend Mario.
+```
+The rest of the demo focuses on running local LLMs and demonstrating use cases.
+#### Key takeaways
+* Local LLMs are not difficult to install and customize.
+* Can be used by individuals and/or organizations for better privacy.
+* Customization increases relevance, ROI.
