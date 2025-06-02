@@ -1,6 +1,14 @@
 # LayerOne 2025
+## About the event
+## Freebies!
+### LayerOne Badge and Shirt
+### Stickers
+
+# CTF Events
+There were two CTF Events that took place: a jeopardy-style CTF where you hack into infrastructure, inspect code or bypass security features to get a string that proves you pulled it off and a hardware CTF event called The Intercept. Sadly, my knowledge of hardware hacking is so limited, so I did not attempt this challenge. I also have to have the complete version of the badge
 
 # Conference Talks
+These are some notes I crudely taken from various presentations, there were actually a total of 12 talks that were preseneted and I only got to attend 3 of them.
 ## Hosting your own AI
 ### What is AI?
 * AI is a vast computer science branch aimed at creating systems to perform tasks requiring human intelligence
@@ -75,3 +83,61 @@ The rest of the demo focuses on running local LLMs and demonstrating use cases.
 * Local LLMs are not difficult to install and customize.
 * Can be used by individuals and/or organizations for better privacy.
 * Customization increases relevance, ROI.
+
+## Covert Regional Communication with MeshTastic
+This talk is presented by Daryll Strauss. This presentation will discuss the fundamentals of LORA radio and mesh networking, the capabilities of Meshtastic, the hardware choices for running Meshtastic, how to configure Meshtastic for secure communication
+### US Radio Config
+* 915mhz +/- 13mhz in the US
+* Unlicensed band for industrial, scientific, and medical applications
+* Low power
+### Range
+* Urban: 2-5 km
+* Rural: 5-15 km
+* Record: 1300 km
+* Long way with line of sight
+* 5 hops is ~50km for me
+### SoCal
+* Active in MeshTastic
+* ~ 300 nodes between San Diego and Simi Valley
+* Lots of chatter on LongFast
+* https://socalmesh.org
+### LORA Config
+* Modem Preset
+* Long fast is most popular
+* Hop limit controls rebroadcasts
+* Max 7 hops
+### Device config
+* Role controls what your node sends
+* Rebroadcast mode controls how it handles
+### Channels
+* First is your default channel
+* Long fast is unencrypted
+### Covert client
+* Create secure channel and remove LongFast
+* Role: Client Hidden
+* Limit hop count to requirement
+* Rebroadcast: doesn't matter, not rebroadcasting
+* Position: On or Off depending on application
+* Heartbeat: Disabled (no extra blinking)
+* Modem preset: probably longfast
+* Consider stand-alone device (eg TDeck)
+### Who/what is your threat?
+* Opsec is hard
+* Remember the panopticon
+* Can they track cell phones?
+* Can they radio locate?
+* Who can see you use the device?
+* Authenticate your users (clean on opsec)
+### Meshtastic limitations
+* NodeID is tied to bluetooth
+* Data may be unreliable
+* Data is small
+
+## Hacking Toys into Robots
+### Reverse imagineering
+Start with the desired outcome, then go for how to get there.
+### Bottango.com
+An open source solution for making animatronic robots
+* Configure Motors
+* Add audio
+* Move motors along a timeline
