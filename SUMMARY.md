@@ -8,7 +8,7 @@
     * [Part II: Home Manager](projects/nix-nixos/2-home-manager.md)
 ## Writeups
 * Capture the Flag
-    * [Correlation One](writeups/correlation-one-2025/correlation_one.md)
+    * [Correlation One](writeups/correlation-one-2025/correlation-one.md)
         * [Encoded Evidence](writeups/correlation-one-2025/encoded-evidence.md)
         * [Hardcoded Lies](writeups/correlation-one-2025/hardcoded-lies.md)
         * [Problems North Torbia](writeups/correlation-one-2025/problems-north-torbia.md)
