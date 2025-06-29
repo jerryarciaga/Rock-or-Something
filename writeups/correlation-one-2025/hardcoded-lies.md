@@ -1,8 +1,7 @@
 # Description
-This is a reverse engineering challenge. Below is the challenge description and the file:
+This is a reverse engineering challenge. The challenge file `hardcodedlies` can be found [here](https://github.com/jerryarciaga/Rock-or-Something/tree/ctf-writeup/writeups/correlation-one-2025/files). Below is the challenge description:
 
 ![Description](files/hardcoded-lies/description.png)
-![hardcodedlies](files/hardcoded-lies/hardcodedlies)
 
 # Writeup
 The challenge description tells us to "pull some `strings`". Lets see what happens when we do:
