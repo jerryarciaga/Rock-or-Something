@@ -9,11 +9,10 @@
 ## Writeups
 * Capture the Flag
     * [Correlation One](writeups/correlation-one-2025/correlation_one.md)
-        * [Behind the Beat]()
-        * [Encoded Evidence]()
-        * [Hardcoded Lies]()
-        * [Secret.txt Society]()
-        * [Problems North Torbia]()
+        * [Encoded Evidence](writeups/correlation-one-2025/encoded-evidence.md)
+        * [Hardcoded Lies](writeups/correlation-one-2025/hardcoded-lies.md)
+        * [Problems North Torbia](writeups/correlation-one-2025/problems-north-torbia.md)
+        * [Secret.txt Society](writeups/correlation-one-2025/secret.txt-society.md)
     * BYUCTF
         * [Hash Psycho | Misc](writeups/byuctf-2025/hash-psycho.md)
     * HTB Cyber Apocalypse

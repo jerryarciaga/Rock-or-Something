@@ -5,3 +5,9 @@ The CTF event was live for two days. It had many challenges of varying difficult
 
 ![Results](files/results.png)
 ![Solved Challenges](files/solved.png)
+
+# Writeups
+* [Encoded Evidence](encoded-evidence.md)
+* [Hardcoded Lies](hardcoded-lies.md)
+* [Problems in North Torbia](problems-north-torbia.md)
+* [Secret.txt Society](secret.txt-society.md)
