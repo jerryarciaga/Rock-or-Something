@@ -6,6 +6,7 @@
 * Nix/NixOS
     * [Part I: My NixOS Setup](projects/nix-nixos/1-my-nixos-setup.md)
     * [Part II: Home Manager](projects/nix-nixos/2-home-manager.md)
+    * [Part III: Maintenance](projects/nix-nixos/3-maintenance.md)
 ## Writeups
 * Capture the Flag
     * [Correlation One](writeups/correlation-one-2025/correlation-one.md)
