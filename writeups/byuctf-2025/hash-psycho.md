@@ -109,8 +109,10 @@ I asked ChatGPT if collisions can occur in Python's `hash()` function. I learned
 ```python
 id = 2 ** 64 # Start at 2 ^ 64
 while hash(id) != hash(1337):
-    print(f'Trying {id}...)
+    print(f'Trying {id}...')
     id += 1
 print(f'Found it! {id}')
 ```
 {% endcode %}
+
+It found it, gave me the flag, allowing me to solve the problem
