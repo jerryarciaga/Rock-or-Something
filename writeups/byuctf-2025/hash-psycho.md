@@ -100,5 +100,17 @@ print(f'Found it! {id}')
 ```
 {% endcode %}
 
+I ran this for more than 2 hours while doing other challenges, hoping that it would spit out a number I can use before the CTF event ends.
+
 ## Research
-I asked ChatGPT if collisions can occure in Python's `hash()` function. I learned that it's possible, but it needs an input number that's large enough to cause it.
+I asked ChatGPT if collisions can occur in Python's `hash()` function. I learned that it's possible, but it needs an input number that's large enough to cause it. I remember looking through questions and answers from Stack Overflow that collisions within the `hash()` function start with very large numbers, such as `2^64`, so I restarted the loop, this time starting at `2^64`.
+
+{% code title="solver.py" lineNumbers="true" %}
+```python
+id = 2 ** 64 # Start at 2 ^ 64
+while hash(id) != hash(1337):
+    print(f'Trying {id}...)
+    id += 1
+print(f'Found it! {id}')
+```
+{% endcode %}
