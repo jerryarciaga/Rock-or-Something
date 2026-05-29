@@ -1,9 +1,13 @@
-# Description
+# Hardcoded Lies
+
+## Description
+
 This is a reverse engineering challenge. The challenge file `hardcodedlies` can be found [here](https://github.com/jerryarciaga/Rock-or-Something/tree/ctf-writeup/writeups/correlation-one-2025/files). Below is the challenge description:
 
-![Description](files/hardcoded-lies/description.png)
+![Description](<../../.gitbook/assets/description (1).png>)
 
-# Writeup
+## Writeup
+
 The challenge description tells us to "pull some `strings`". Lets see what happens when we do:
 
 ```

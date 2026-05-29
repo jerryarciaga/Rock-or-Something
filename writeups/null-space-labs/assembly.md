@@ -1,22 +1,30 @@
-# Instructions and Opcodes
+# Assembly
+
+## Instructions and Opcodes
+
 * All assembly languages are mnemonic
 * Direct translation from instruction to binary representation
+
 ```
 xor eax, eax --> 31 c0
 int 0x80 --> cd 80
 push
 ```
+
 * **Instructions** are human readable.
 * **Opcodes** are machine readable.
 
-# Instruction lengths
-* Intel has a variable length instruction set
-    - Instructions range from 1-15+ bytes
-    - Other languages have fixed-length instruction sets
-* Most instruction *arguments* are limited by processor size.
+## Instruction lengths
 
-# Our First Program
+* Intel has a variable length instruction set
+  * Instructions range from 1-15+ bytes
+  * Other languages have fixed-length instruction sets
+* Most instruction _arguments_ are limited by processor size.
+
+## Our First Program
+
 * Our program will do: `exit(10)`
+
 {% code lineNumbers="true" %}
 ```asm
 ; This is a comment line. All text after a ; is a comment below.
@@ -37,61 +45,72 @@ _start:
     syscall         ; perform a system call
 ```
 {% endcode %}
-## Compiling our first program
+
+### Compiling our first program
+
 * You may need to do: `sudo apt install nasm`
 * On NixOS or with `nix`: `nix-shell -p nasm`
 * Assemble to object file, then link and output executable:
+
 ```
 $ nasm -f elf64 code1.asm
 $ ld -o exec_code1 code1.o
 ```
-## Run our executable and look at return code
+
+### Run our executable and look at return code
+
 ```
 $ ./exec_code1
 $ echo $?
 ```
 
-# CPU Registers
+## CPU Registers
+
 * **Register**: a place to store data for processing on the CPU
-* x86_64 registers:
-    * `rax`
-    * `rbx`
-    * `rcx`
-    * `rdx`
-    * `rsi`
-    * `rdi`
-    * `rsp`
-    * `rbp`
-    * `r10`
-    * `r9`
-    * `r8`
-    * etc
+* x86\_64 registers:
+  * `rax`
+  * `rbx`
+  * `rcx`
+  * `rdx`
+  * `rsi`
+  * `rdi`
+  * `rsp`
+  * `rbp`
+  * `r10`
+  * `r9`
+  * `r8`
+  * etc
 
-# CPU Registers Addressing
+## CPU Registers Addressing
+
 * Registers are 64 bits, but can be addressed to access smaller data sizes
-    * `rax` = 64 bits
-    * `eax` = 32 bits
-    * `ax` = 16 bits
-    * `ah` = 8 bits (high)
-    * `al` = 8 bits (low)
+  * `rax` = 64 bits
+  * `eax` = 32 bits
+  * `ax` = 16 bits
+  * `ah` = 8 bits (high)
+  * `al` = 8 bits (low)
 
-# Special CPU Registers
+## Special CPU Registers
+
 * Some registers have special purposes/uses
-    * `RIP`: The current instruction pointer (non writable)
-    * `RBP`/`RSP`: Current stack pointers*
+  * `RIP`: The current instruction pointer (non writable)
+  * `RBP`/`RSP`: Current stack pointers\*
 
-# Instruction Parameters
+## Instruction Parameters
+
 Instruction parameters can be:
+
 * An **immediate** value, also called **literal** or **constant value**
 * A register name
-* A memore address, relative or literal
-Each instruction allows different parameter types
+* A memore address, relative or literal\
+  Each instruction allows different parameter types
 * Some cannot use literal values/registers/etc
 * Some limit size of parameters
 
-# First Program (revisited)
-Mov instruction format:
-`mov dest, source` moves data in source to dest
+## First Program (revisited)
+
+Mov instruction format:`mov dest, source` moves data in source to dest
+
 ```asm
 mov rdi, 10 ; set rdi = 10
 mov rax, 60 ; rax = 60
@@ -100,10 +119,12 @@ syscall ; call kernel
 
 `man 2 exit` shows the **Linux Programmer's Manual**
 
-# Linux System Calls
+## Linux System Calls
+
 Asking the OS to provide a service to your program
 
-# Second Example: Arithmetic
+## Second Example: Arithmetic
+
 {% code lineNumbers="true" %}
 ```asm
 ; Example exit(10) with register manipulation/arithmetic
@@ -119,12 +140,15 @@ _start:
 ```
 {% endcode %}
 
-# Control Flow Instructions
-## Functions
-* `call` - go to an address with the intent of *returning*
+## Control Flow Instructions
+
+### Functions
+
+* `call` - go to an address with the intent of _returning_
 * `ret` - return to calling address
 
-# Example 3: Function Calls
+## Example 3: Function Calls
+
 {% code lineNumbers="true" %}
 ```asm
 ; Example code for function calls
@@ -157,8 +181,10 @@ code3:
 ```
 {% endcode %}
 
-# Higher Level Control Flow Concepts
+## Higher Level Control Flow Concepts
+
 Take a look at this simple Python code
+
 {% code lineNumbers="true" %}
 ```python
 a = 10
@@ -166,7 +192,9 @@ if (a == 1):
     do_stuff
 ```
 {% endcode %}
-## Assembly `if` conditional
+
+### Assembly `if` conditional
+
 {% code lineNumbers="true" %}
 ```asm
 mov rax, 10
@@ -175,14 +203,17 @@ jz do_stuff
 jmp exit
 ```
 {% endcode %}
+
 * `cmp dest, source` - compare by subtracting source from dest (do not store result in dest)
-* `jz` - jump to address if result of previous instruction was *zero*
+* `jz` - jump to address if result of previous instruction was _zero_
 * `jmp` - jump to address, unconditionally
 
-# Processor Flags Register
+## Processor Flags Register
+
 * `RFLAGS` - register which keeps track of the most recent instruction flags
 
-# Example 4: Conditional Statement
+## Example 4: Conditional Statement
+
 {% code lineNumbers="true" %}
 ```asm
 ; Example conditional, check if rax == 1 
@@ -207,12 +238,14 @@ exit:
 ```
 {% endcode %}
 
-# Additional Common Instructions
+## Additional Common Instructions
+
 * `sub dest, source`
 * `inc asdf`
 * `dec asdf`
 
-# Assembly `for` loop
+## Assembly `for` loop
+
 {% code lineNumbers="true" %}
 ```asm
 ; Example "for loop"
@@ -241,7 +274,8 @@ _exit:
 ```
 {% endcode %}
 
-# Components of a process
+## Components of a process
+
 * **Text**: Program code
 * **Stack**: Function variables, grows downward
 * **Heap**: Dynamic memory/data, grows upward
@@ -249,16 +283,21 @@ _exit:
 * **BSS**: Static data, undefined
 * **Kernel space**
 
-# Stack Registers
-* `rsp` - stack pointer, current *head*
+## Stack Registers
+
+* `rsp` - stack pointer, current _head_
 * `rbp` - base pointer
 
-# Debuggers
+## Debuggers
+
 * Debug a program
 * Watch/manipulate a program while it's running
-## Basic features of a debugger
+
+### Basic features of a debugger
+
 * Run-time disassembly
 * To disassemble a compiled program, run the following:
+
 ```
 $ objdump -M intel -d exec_code
 ```

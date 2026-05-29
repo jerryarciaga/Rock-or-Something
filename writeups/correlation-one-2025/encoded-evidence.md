@@ -1,6 +1,8 @@
-# Description
-This is a reverse engineering challenge. Below is the screenshot of the challenge description.
-![Challenge description](files/encoded-evidence/description.png)
+# Encoded Evidence
+
+## Description
+
+This is a reverse engineering challenge. Below is the screenshot of the challenge description. ![Challenge description](../../.gitbook/assets/description.png)
 
 {% code title="invoice.vbs" lineNumbers="true" %}
 ```vbs
@@ -25,7 +27,8 @@ MsgBox response & vbCrLf & vbCrLf & "You really shouldn't just double-click to o
 ```
 {% endcode %}
 
-# Writeup
+## Writeup
+
 There is a Pastebin link found at line 9 within the script. The script also tells us that it contains a base64-encoded string. Access it using a browser, then do a base64 decode to get the flag. Alternatively, you can also do this all in a terminal.
 
 ```
